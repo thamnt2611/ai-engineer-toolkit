@@ -5,3 +5,4 @@
 *.onnx
 *.zip
 *.log
+ds_model_test
