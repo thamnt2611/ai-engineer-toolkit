@@ -331,9 +331,9 @@ if __name__ == '__main__':
     from tqdm import tqdm
     detector = FaceDetector(model_file='/home/asi/camera/thamnt/common/data_utils/face_cropping/face_det_model/scrfd_2.5g_bnkps_dynamic.onnx')
     detector.prepare(-1)
-    data_dir = '/home/asi/camera/thamnt/dataset/sunglasses/raw/glasses-and-coverings'
-    save_dir = '/home/asi/camera/thamnt/dataset/sunglasses/cropped_faces/glasses-and-coverings'
-    sub_dirs = [sd for sd in os.listdir(data_dir) if not sd.endswith('txt')]
+    data_dir = '/home/asi/camera/thamnt/clf_train/mask_nomask_v2/datasets/vp_wrong_22072024/removed_dup/all_copy'
+    save_dir = '/home/asi/camera/thamnt/clf_train/mask_nomask_v2/datasets/vp_wrong_22072024/face_cropped'
+    sub_dirs = [''] #[sd for sd in os.listdir(data_dir) if not sd.endswith('txt')]
     for sub_dir in sub_dirs:
         if sub_dir not in os.listdir(save_dir):
             names = [name for name in os.listdir(os.path.join(data_dir, sub_dir)) if name.endswith('jpg')]
